@@ -930,12 +930,13 @@ class _ProjectGalleryDialogState extends State<_ProjectGalleryDialog> with Dispo
               mainAxisSize: MainAxisSize.min,
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      widget.project.title,
-                      style: (Theme.of(context).textTheme.titleMedium ?? TextStyle()).copyWith(
-                        color: Colors.white.withValues(alpha: 0.4),
+                    Expanded(
+                      child: Text(
+                        widget.project.title,
+                        style: (Theme.of(context).textTheme.titleMedium ?? TextStyle()).copyWith(
+                          color: Colors.white.withValues(alpha: 0.4),
+                        ),
                       ),
                     ),
                     Transform.translate(
