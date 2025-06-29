@@ -35,6 +35,7 @@ class _MyHomePageState extends State<HomePage> {
         Provider.value(value: _ResponsiveState(isWide: isWide)),
       ],
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: SafeArea(
           child: Container(
             decoration: const BoxDecoration(
@@ -1152,6 +1153,7 @@ class _ChatWidgetState extends State<_ChatWidget> with DisposableState {
             size: size,
             child: Scaffold(
               primary: false,
+              resizeToAvoidBottomInset: false,
               backgroundColor: Colors.transparent,
               body: SafeArea(
                 child: Container(
