@@ -931,6 +931,7 @@ class _ProjectGalleryDialogState extends State<_ProjectGalleryDialog> with Dispo
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
                       child: Text(
@@ -1179,6 +1180,7 @@ class _ChatWidgetState extends State<_ChatWidget> with DisposableState {
                         padding: const EdgeInsets.symmetric(horizontal: 16.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               contentFeed.chatTitle,
