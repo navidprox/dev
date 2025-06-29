@@ -928,6 +928,7 @@ class _ProjectGalleryDialogState extends State<_ProjectGalleryDialog> with Dispo
           child: IntrinsicWidth(
             child: Column(
               mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Row(
                   children: [
