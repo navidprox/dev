@@ -592,7 +592,7 @@ class _TechStack extends StatefulWidget {
   State<_TechStack> createState() => _TechStackState();
 }
 
-class _TechStackState extends State<_TechStack> with DisposableState{
+class _TechStackState extends State<_TechStack> with DisposableState {
   late final controller = disposable(ScrollController());
 
   bool isCloud = false;
@@ -739,7 +739,7 @@ class _Projects extends StatefulWidget {
   State<_Projects> createState() => _ProjectsState();
 }
 
-class _ProjectsState extends State<_Projects> with DisposableState{
+class _ProjectsState extends State<_Projects> with DisposableState {
   late final controller = disposable(ScrollController());
 
   @override
@@ -806,8 +806,22 @@ class _ProjectItemState extends State<_ProjectItem> {
               spacing: 8.0,
               children: [
                 Expanded(
-                  child: Text(
-                    widget.project.title,
+                  child: Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(text: widget.project.title),
+                        if (widget.project.imageAssets.isNotEmpty || widget.project.links.isNotEmpty) ...[
+                          TextSpan(text: ' '),
+                          WidgetSpan(
+                            child: FaIcon(
+                              FontAwesomeIcons.fileImage,
+                              size: 17,
+                              color: containerRightBackgroundColor.contrastWB().withValues(alpha: 0.8),
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
                     style: (Theme.of(context).textTheme.titleLarge ?? const TextStyle()).copyWith(
                       color: containerRightBackgroundColor.contrastWB().withValues(alpha: 0.8),
                       height: 1.6,

@@ -54,7 +54,7 @@ class Content {
   final String chatEmptyMessage =
       "Hey there! Let's talk work. Ask about my skills, "
       "past experiences, how I can help you, etc.";
-  final String chatFieldHint = 'Type something...';
+  final String chatFieldHint = '(Currently unavailable)';
 
   late final Map<HomeTab, String> homeTabTitles = Map.fromEntries(
     HomeTab.values.map(
